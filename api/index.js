@@ -36,7 +36,7 @@ module.exports = async (req, res) => {
                 </head>
                 <body>
                     <div class="container">
-                        <h1>n8n Workflow Automation</h1>
+                        <h1>n8n Workflow Automation Platform</h1>
                         <div class="status error">
                             <h3>⚠️ Configuration Issue</h3>
                             <p>n8n is not properly configured for Vercel serverless deployment.</p>
