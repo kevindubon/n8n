@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     healthCheckPath: /healthz
-    buildCommand: "pnpm install --frozen-lockfile && pnpm run build"
+    buildCommand: "pnpm install && pnpm run build"
     startCommand: "cd packages/cli && node bin/n8n start"
     autoDeploy: true
     envVars:

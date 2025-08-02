@@ -106,7 +106,9 @@
       "form-data": "4.0.4"
     },
     "patchedDependencies": {
+      "@types/ws@8.18.1": "patches/@types__ws@8.18.1.patch",
       "bull@4.16.4": "patches/bull@4.16.4.patch",
+      "js-base64@3.7.2": "patches/js-base64.patch",
       "pdfjs-dist@5.3.31": "patches/pdfjs-dist@5.3.31.patch",
       "pkce-challenge@5.0.0": "patches/pkce-challenge@5.0.0.patch"
     }
