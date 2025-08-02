@@ -6,10 +6,7 @@
       "use": "@vercel/node",
       "config": {
         "maxLambdaSize": "50mb",
-        "includeFiles": [
-          "packages/**",
-          "node_modules/**"
-        ]
+        "maxDuration": 300
       }
     }
   ],
@@ -26,39 +23,5 @@
       "src": "/(.*)",
       "dest": "packages/cli/bin/n8n"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "N8N_BASIC_AUTH_ACTIVE": "true",
-    "N8N_HOST": "0.0.0.0",
-    "N8N_PORT": "5678",
-    "N8N_PROTOCOL": "https",
-    "WEBHOOK_URL": "",
-    "DB_TYPE": "postgresdb",
-    "DB_POSTGRESDB_HOST": "",
-    "DB_POSTGRESDB_PORT": "5432",
-    "DB_POSTGRESDB_DATABASE": "",
-    "DB_POSTGRESDB_USER": "",
-    "DB_POSTGRESDB_PASSWORD": "",
-    "DB_POSTGRESDB_SSL_CA": "",
-    "DB_POSTGRESDB_SSL_CERT": "",
-    "DB_POSTGRESDB_SSL_KEY": "",
-    "DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED": "false",
-    "N8N_ENCRYPTION_KEY": "",
-    "N8N_USER_MANAGEMENT_JWT_SECRET": "",
-    "N8N_EMAIL_MODE": "smtp",
-    "N8N_SMTP_HOST": "",
-    "N8N_SMTP_PORT": "587",
-    "N8N_SMTP_USER": "",
-    "N8N_SMTP_PASS": "",
-    "N8N_SMTP_SENDER": "",
-    "N8N_SMTP_SSL": "false",
-    "EXECUTIONS_DATA_PRUNE": "true",
-    "EXECUTIONS_DATA_MAX_AGE": "336"
-  },
-  "functions": {
-    "packages/cli/bin/n8n": {
-      "maxDuration": 300
-    }
-  }
+  ]
 }
