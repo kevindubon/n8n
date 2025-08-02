@@ -1,11 +1,13 @@
 services:
   - type: web
     name: n8n-supabase
-    env: docker
-    dockerfilePath: ./Dockerfile
+    env: node
     plan: free
     region: oregon
     healthCheckPath: /healthz
+    buildCommand: "pnpm install --frozen-lockfile && turbo run build --filter=!@n8n/imap"
+    startCommand: "cd packages/cli && node bin/n8n start"
+    autoDeploy: true
     envVars:
       # Supabase Database Configuration
       - key: DB_TYPE
