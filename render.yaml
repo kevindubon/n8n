@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     healthCheckPath: /healthz
-    buildCommand: "pnpm install --frozen-lockfile && turbo run build --filter=!@n8n/imap"
+    buildCommand: "pnpm install --frozen-lockfile && pnpm run build"
     startCommand: "cd packages/cli && node bin/n8n start"
     autoDeploy: true
     envVars:
